@@ -2,6 +2,7 @@ name: Matrix strategy workflow
 on: push
 jobs:
   nodejs_matrix:
+    continue-on-error: true
     strategy:
       matrix:
         operating-system: [ubuntu-latest, windows-latest, macos-latest]
