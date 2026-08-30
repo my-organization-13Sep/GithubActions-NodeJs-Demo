@@ -5,7 +5,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest, windows-latest, macos-latest]
-        node-version: [18, 140, 16, 12]
+        node-version: [18, 14, 16, 12]
     runs-on: ${{ matrix.operating-system }}
     steps:
       - name: Checkout the code on runner VM
@@ -13,7 +13,7 @@ jobs:
       - name: Install NodeJS 
         uses: actions/setup-node@v7
         with:
-          node-version: 18
+          node-version: ${{ matrix.node-version }}
       - name: Install nodejs dependencies 
         run: npm ci  
       - name: Execute test cases 
