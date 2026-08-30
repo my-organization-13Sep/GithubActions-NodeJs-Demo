@@ -5,6 +5,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [18, 14, 16, 12]
     runs-on: ${{ matrix.operating-system }}
     steps:
       - name: Checkout the code on runner VM
