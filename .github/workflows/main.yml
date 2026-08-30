@@ -4,7 +4,7 @@ jobs:
   job_build:  # this is name of the job 
     runs-on: ubuntu-latest  # this is the VM where the job will run
     steps: 
-     - name: Checkout the code on runner VM .
+     - name: Checkout the code on runner VM 1.
        uses: actions/checkout@v7  
        # this action will checkout the code on the runner VM
      - name: Install NodeJS 
